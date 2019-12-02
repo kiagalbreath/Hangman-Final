@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Hangman</title>
+</head>
+
+<body>
+  <div class="container">
+    <div class="intro-btn"></div>
+    <div class="intro-bg"></div>
+    <div class="dead-guy"></div>
+    <div class="bg"></div>
+
+    <div class="instructions">GUESS THE WORD OR PHRASE</div>
+    <div class="gameOver">GAME OVER</div>
+    <div class="youWin">YOU WIN!</div>
+
+    <div class="game-components">
+      <ul class="word" id="word"></ul>
+      <ul class="letters" id="letters"></ul>
+      <ul class="controls">
+        <li class="endResult-btn" onclick="resetGame();"><!-- continue playing -or- game over --></li>
+        <li class="attempts">You have <span id="attempts_remaining">0</span> attempts remaining</li>
+      </ul>
+    </div>
+
+    
+  </div>
+</body>
+
+<script src="main.js"></script>
+
+</html>

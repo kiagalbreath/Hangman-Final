@@ -1,0 +1,165 @@
+body {
+  padding: 0; margin: 0;
+  background-color: #000;
+  font-family:  'sans-serif';
+}
+
+.container {
+  position: absolute;
+  width: 550px; height: 800px;
+  top: 50%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+}
+
+.show {
+  /*display: none;*/
+  -webkit-transition: opacity 0.7s ease-in-out;
+  -moz-transition: opacity 0.7s ease-in-out;
+  -ms-transition: opacity 0.7s ease-in-out;
+  -o-transition: opacity 0.7s ease-in-out;
+  transition: opacity 0.7s ease-in-out;
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.hide {
+  -webkit-transition: opacity 0.7s ease-in-out;
+  -moz-transition: opacity 0.7s ease-in-out;
+  -ms-transition: opacity 0.7s ease-in-out;
+  -o-transition: opacity 0.7s ease-in-out;
+  transition: opacity 0.7s ease-in-out;
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* Intro background */
+.intro-btn {
+  cursor: pointer;
+  position: absolute; z-index: 4;
+  top: 700px; right: 95px;
+  background: url('btn.png') no-repeat;
+  width: 183px; height: 47px;
+}
+.intro-bg {
+  border: 5px solid white;
+  position: absolute; z-index: 0;
+  background: url('bgd.jpg') no-repeat;
+  width: 100%; height: 100%;
+}
+
+/* Main game background */
+.bg {
+  border: 5px solid white;
+  position: absolute; z-index: 0;
+  background: url('bgd.jpg') no-repeat; 
+  width: 100%; height: 100%;
+}
+
+/* Game components */
+.game-components {
+  position: absolute; z-index: 2;
+  width: 100%;
+  top: 400px;
+  margin-left: -20px;
+}
+
+.instructions, .gameOver, .youWin {
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  font-size: 42px;
+  font-weight: bolder;
+  color: red;
+  margin-top: 485px;
+}
+.instructions {
+  font-size: 32px;
+  color: black;
+  margin-top: 495px;
+}
+.youWin {
+  color: #00C42C;
+}
+
+.attempts {
+  color: black;
+}
+
+li {
+  list-style: none;
+}
+.word,
+.letters {
+  display: flex;
+  justify-content: center;
+  text-transform: uppercase;
+}
+.word li,
+.letters li {
+  margin: 5px;
+}
+
+.word {
+  margin: 20px 0;
+}
+.word li {
+  width: 26px;
+  height: 30px;
+  border-bottom: 2px solid black;
+  color: #fff;
+  text-align: center;
+}
+
+.word li.empty {
+  width: 26px;
+  height: 30px;
+  border-bottom: none;
+}
+
+.letters {
+  flex-wrap: wrap;
+  margin-top: 100px;
+}
+.letters li {
+  background-color: #494534;
+  width: 26px;
+  height: 30px;
+  line-height: 30px;
+  color: white;
+  box-shadow: 2px 2px 2px #aaa;
+  border-radius: 3px;
+  text-align: center;
+  transition: 0.1s ease-in-out;
+  cursor: pointer;
+}
+.letters li:hover {
+  line-height: 26px;
+}
+.letters .guessed {
+  background-color: green;
+}
+.letters .bad-guess {
+  background-color: #000;
+  color: #494534;
+  box-shadow: 2px 2px 2px #494534;
+}
+
+.controls {
+  display: flex;
+  justify-content: center;
+}
+
+.endResult-btn {
+  position: absolute;
+  margin-top: 40px;
+  padding: 10px 20px;
+  -webkit-border-radius: 20px;
+  border-radius: 20px;
+  text-transform: uppercase;
+  cursor: pointer;
+  background-color: green;
+  color: black;
+  font-size: 30px;
+}
